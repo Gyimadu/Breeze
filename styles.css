@@ -48,6 +48,8 @@ html, body{
 #nav-links li a:hover{
     color: #763ede;
     text-decoration: underline;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 1px;
 }
 
 #nav-links li{
@@ -181,6 +183,7 @@ button{
     color: #000;
     background-color: #b6b6b6;
     border-color: #000;
+    letter-spacing: 0.5px;
     margin: 20px 0 0 0;
 }
 
@@ -214,7 +217,7 @@ button:hover{
 
 .about-container{
     display: flex;
-    min-height: 150vh;
+    min-height: 160vh;
     width: 100%;
     background-color: #000;
     color: #fff;
@@ -223,7 +226,7 @@ button:hover{
 }
 
 .about-container .left-container{
-    min-height: 150vh;
+    min-height: 160vh;
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -243,7 +246,7 @@ button:hover{
 }
 
 #features{
-    min-height: 150vh;
+    min-height: 160vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -257,10 +260,31 @@ button:hover{
 
 #feature h4{
     padding-bottom: 10px;
+    color: #763ede;
 }
 
 #feature p{
     padding-bottom: 10px;
+}
+
+#feature a{
+    text-decoration: none;
+    color: #fff;
+    font-size: 13px;
+    letter-spacing: 0.5px;
+}
+
+#feature span{
+    padding-left: 5px;
+    color: #763ede;
+    font-weight: bolder;
+}
+
+#feature a:hover{
+    text-decoration: underline;
+    text-decoration-color: #763ede;
+    text-underline-offset: 7px;
+    text-decoration-thickness: 1px;
 }
 
 .row{
