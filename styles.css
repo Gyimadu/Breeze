@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap');
+
+*{
+    font-family: 'Kumbh Sans', sans-serif;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: #000;
+    width: 100%;
+}
+
+.logo-container{
+    position: fixed;
+    top: 0;
+    padding: 20px 25px;
+}
+
+.header-wrapper{
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 20px 25px;
+}
+
+#nav-links{
+    list-style-type: none;
+    display: inline-flex;
+}
+
+#nav-links li a{
+    text-decoration: none;
+    color: #3f3f3f;
+}
+
+#nav-links li a:hover{
+    color: #763ede;
+    text-decoration: underline;
+}
+
+#nav-links li{
+    padding: 0 15px;
+}
+
+#nav-links li:last-child{
+    padding: 0 0 0 15px;
+}
+
+.menu-icon{
+    display: none;
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 968px) {
+    .header-container {
+        justify-content: space-between; /* Ensure logo and menu icon are at opposite ends */
+        flex-wrap: wrap; /* Allow elements to wrap */
+    }
+
+    .header-wrapper {
+        justify-content: flex-end; /* Align items to the right */
+        flex: 1 1 100%; /* Take full width */
+    }
+
+    .menu-icon{
+        display: flex; /* Show menu icon */
+        align-items: center;
+        cursor: pointer;
+        font-size: 20px;
+        position: fixed;
+        top: 0;
+        right: 0;
+        padding: 20px 25px;
+        margin: 0 15px;
+        color: #000;
+    }
+
+    #nav-links {
+        display: none; /* Hide nav-links by default */
+        flex-direction: column;
+        background-color: #fff;
+        position: absolute;
+        top: 100%; /* Position below the header-wrapper */
+        right: 0;
+        width: 100%;
+    }
+
+    #nav-links.active {
+        display: flex; /* Show nav-links when active */
+        padding: 0 25px;
+        margin-top: 0;
+        background-color: rgba(170, 170, 170, 0.283);
+    }
+
+    #nav-links.active li{
+        padding: 5px 0;
+    }
+
+    .banner{
+        display: block;
+        padding: 0 50px;
+        background-color: #000;
+        color: #fff;
+        min-height: 50vh;
+        width: 100%;
+    }
+
+    .col-left{
+        width: 100%;
+    }
+
+    .col-right{
+        width: 100%;
+    }
+}
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+}
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+
+.hero-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+    padding: 20px 25px;
+    background-image: url(smiley.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.welcome-text{
+    color: #fff;
+    padding-top: 80px;
+}
+
+#hero{
+    font-size: 35px;
+    margin-bottom: 15px;
+    border-color: #000;
+    border-width: 1px;
+}
+
+button{
+    padding: 10px 15px;
+    color: #000;
+    background-color: #b6b6b6;
+    border-color: #000;
+    margin: 20px 0 0 0;
+}
+
+button:hover{
+    background-color: #fff;
+}
+
+.banner{
+    display: flex;
+    flex-direction: row;
+    background-color: #000;
+    color: #fff;
+    min-height: 50vh;
+    width: 100%;
+    margin-bottom: 60px;
+}
+
+.banner-header{
+    display: flex;
+    padding: 75px 0 0 45px;
+    margin-right: 30px;
+}
+
+.banner-text{
+    display: flex;
+    flex-direction: column;
+    padding: 75px 45px 0 0;
+}
+
+.about-container{
+    min-height: 150vh;
+    max-width: 100%;
+    background-color: #000;
+    color: #fff;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.features{
+    min-height: 50vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+}
+
+.row{
+    padding: 0 15px;
+    width: 100%;
+}
+
+.features h3{
+    margin-bottom: 10px;
+}
+
+.features h3 span{
+    padding: 20px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.feature a{
+    text-decoration: none;
+    color: #000;
+}
+
+#inner{
+    height: 35vh;
+    font-size: 14px;
+    padding: 20px 25px;
+    margin: 0 10px 0 0;
+    text-align: center;
+    background-color: #e9e9e9;
+    border-radius: 10px;
+    overflow: auto;
+}
+
+.hook{
+    min-height: 80vh;
+    width: 100%;
+    background-color: #763ede;
+    color: #fff;
+}
+
+#header{
+    font-size: 45px;
+    padding: 70px 40px 15px 40px;
+}
+
+#arrow{
+    font-size: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 150px 10px;
+}
+
+#text{
+    padding: 45px 40px;
+    margin-top: 45px;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 0.7cm;
+}
+
+.info{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.info .right{
+    min-height: 100vh;
+}
+
+.info .right img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#l1{
+    background-color: #fff;
+    min-height: 50vh;
+}
+
+#l2{
+    background-color: #f46060;
+    min-height: 50vh;
+}
+
+.more{
+    min-height: 90vh;
+    background-color: #f46060;
+}
+
+.contact{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    padding: 0;
+    margin: 50px 0 0 0;
+}
+
+.contact-card{
+    display: flex;
+    min-height: 100vh;
+    background-color: #000;
+}
+
+.contact-card img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#contact-header{
+    font-size: 60px;
+    text-align: center;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 50px;
+}
+
+input{
+    margin: 5px 0 15px 0;
+    padding: 5px 0;
+    width: 70%;
+}
+
+.footer{
+    background-color: #f4f4f4;
+    padding: 40px 80px;
+    margin-top: 30px;
+    font-size: 13px;
+    width: 100%;
+}
+
+.footer-links{
+    padding: 30px 0;
+}
+
+.footer-links ul{
+    list-style-type: none;
+}
