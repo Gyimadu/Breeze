@@ -188,6 +188,8 @@ button:hover{
     background-color: #fff;
 }
 
+
+
 .banner{
     display: flex;
     flex-direction: row;
@@ -211,53 +213,59 @@ button:hover{
 }
 
 .about-container{
+    display: flex;
     min-height: 150vh;
-    max-width: 100%;
+    width: 100%;
     background-color: #000;
     color: #fff;
     padding-left: 2rem;
     padding-right: 2rem;
 }
 
-.features{
-    min-height: 50vh;
-    width: 100%;
+.about-container .left-container{
+    min-height: 150vh;
     display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 60px 30px;
+}
+
+.about-container .left-container img{
+    width: 100%;
+    height: auto;
+}
+
+.about-container .right-container{
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#features{
+    min-height: 150vh;
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: space-evenly;
-    margin-bottom: 60px;
+    justify-content: center;
+    padding: 0 25px 0 30px;
+}
+
+#feature{
+    padding-bottom: 25px;
+}
+
+#feature h4{
+    padding-bottom: 10px;
+}
+
+#feature p{
+    padding-bottom: 10px;
 }
 
 .row{
     padding: 0 15px;
     width: 100%;
-}
-
-.features h3{
-    margin-bottom: 10px;
-}
-
-.features h3 span{
-    padding: 20px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.feature a{
-    text-decoration: none;
-    color: #000;
-}
-
-#inner{
-    height: 35vh;
-    font-size: 14px;
-    padding: 20px 25px;
-    margin: 0 10px 0 0;
-    text-align: center;
-    background-color: #e9e9e9;
-    border-radius: 10px;
-    overflow: auto;
 }
 
 .hook{
